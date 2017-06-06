@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var day = prompt("Insert a day of the week: ");
+			day= day.toLowerCase();
+			var array=["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]; 
+			
+			if(array.indexOf(day) !== -1){
+				for(index in array){
+					if(array[index] === day && (day === "sunday" || day === "saturday")){
+						console.log("This is a Saturday or a Sunday" );
+						break;
+					}
+				}	
+			}else{
+				console.log("The value you entered is not a day");
+			}
+			
+		</script>
+	</body>
+</html>

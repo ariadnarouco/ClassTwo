@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Segundo ejercicio de la clase dos</title>
+	</head>
+	<body>
+	<script type="text/javascript">
+		var options = ["PIEDRA", "PAPEL" , "TIJERA"];
+		var option= prompt("Querés jugar? Ingresá una opción: Pidera, Papel o Tijera");
+		
+		var jugador=option.toUpperCase();
+		var isValidInput = options.indexOf(jugador);
+		var message= "Perdiste";
+
+		if(isValidInput !== -1){
+			var num =Math.floor(Math.random() * (3));
+			
+			switch(jugador){
+
+				case "PIEDRA":
+					"PAPEL" ===  options[num] ? alert("Perdiste") : alert("Ganaste");
+					break;
+				case "PAPEL":
+					"PIEDRA" ===  options[num] ? alert("Ganaste") : alert("Perdiste");
+					break;
+
+				case "TIJERA":
+					"PEIDRA" ===  options[num] ? alert("Ganaste") : alert("Perdiste");
+					break;
+
+				default:
+					message= "error";
+					break;
+
+			}	
+			console.log("Usaurio seleccionó " + jugador);
+			console.log("Computadora seleccionó " + options[num]);
+
+		}else{
+			alert("El valor ingresado no es correcto");
+		}
+
+		
+
+		
+	</script>
+	</body>
+</html>
